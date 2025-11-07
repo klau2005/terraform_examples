@@ -1,16 +1,26 @@
+name: Check run
+
 on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '**.md'
   pull_request:
-    branches:
-      - main
-      
+    paths-ignore:
+      - '**.md'
+  workflow_dispatch:
+
 jobs:
-  zap_scan:
+  check-run:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Run OWASP ZAP Baseline Scan
-        uses: zaproxy/action-baseline@v0.6.0
-        with:
-          target: 'https://google-gruyere.appspot.com/430636331223676360418795753798261692380/'
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: ZAP Scan
+      uses: ./
+      id: action-full-scan
+      with:
+        target: 'https://google-gruyere.appspot.com/430636331223676360418795753798261692380/'
+        allow_issue_writing: false
