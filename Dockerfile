@@ -1,4 +1,4 @@
-FROM python:3.10.12-slim
+FROM python:3.10.19-slim
 WORKDIR /usr/local/app
 COPY requirements.txt .
 EXPOSE 8080
