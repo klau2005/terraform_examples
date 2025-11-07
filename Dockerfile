@@ -1,4 +1,4 @@
-FROM rundeck:5.8.0
+FROM rundeck/rundeck:5.8.0
 WORKDIR /usr/local/app
 COPY requirements.txt .
 EXPOSE 8080
