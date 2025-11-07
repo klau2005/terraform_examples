@@ -66,6 +66,7 @@ resource "aws_security_group" "instance" {
 }
 
 resource "aws_instance" "example" {
+  monitoring = true
   ami           = var.ami_tamu_ubuntu
   instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.instance.id]
