@@ -1,5 +1,6 @@
 FROM python:3.10.19-slim-trixie
 WORKDIR /usr/local/app
+RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8080
 RUN useradd app
 USER app
