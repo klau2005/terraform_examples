@@ -1,4 +1,4 @@
-FROM rundeck/rundeck:5.8.0
+FROM python:3.10.12-slim
 WORKDIR /usr/local/app
 COPY requirements.txt .
 EXPOSE 8080
