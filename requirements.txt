@@ -1,1 +1,2 @@
 agentscope==0.0.4
+Pycel==1.0b29
