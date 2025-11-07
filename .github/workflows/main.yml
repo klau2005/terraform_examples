@@ -1,0 +1,7 @@
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Checkov scan
+        uses: bridgecrewio/checkov-action@master
