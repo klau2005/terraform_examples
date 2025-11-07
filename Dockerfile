@@ -1,4 +1,4 @@
-FROM python:3.13
+FROM python:3.11
 WORKDIR /usr/local/app
 COPY requirements.txt .
 RUN apt update && apt install -y python3-pip
