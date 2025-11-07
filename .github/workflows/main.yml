@@ -7,3 +7,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Checkov scan
         uses: bridgecrewio/checkov-action@master
+      - name: Run Trivy on Docker image
+        run: |
+          docker pull docker/aci-hostnames-sidecar:1.0
+          trivy image --exit-code 1 docker/aci-hostnames-sidecar:1.0
+
