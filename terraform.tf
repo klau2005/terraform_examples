@@ -14,6 +14,7 @@ provider "aws" {
 
 resource "aws_security_group" "instance" {
   name = "tf-test"
+  description = "test sg"
 
   ingress {
     from_port   = var.server_port
