@@ -1,4 +1,4 @@
-FROM python:3.13
+FROM python:3.10.19-slim-trixie
 WORKDIR /usr/local/app
 EXPOSE 8080
 RUN useradd app
