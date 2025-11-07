@@ -17,6 +17,7 @@ resource "aws_security_group" "instance" {
   description = "test sg"
 
   ingress {
+    description = "test sg"
     from_port   = var.server_port
     to_port     = var.server_port
     protocol    = "tcp"
@@ -24,6 +25,7 @@ resource "aws_security_group" "instance" {
   }
 
   ingress {
+    description = "test sg"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
@@ -31,6 +33,7 @@ resource "aws_security_group" "instance" {
   }
 
   egress {
+    description = "test sg"
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
@@ -38,6 +41,7 @@ resource "aws_security_group" "instance" {
   }
 
   egress {
+    description = "test sg"
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
@@ -45,6 +49,7 @@ resource "aws_security_group" "instance" {
   }
 
   egress {
+    description = "test sg"
     from_port   = var.server_port
     to_port     = var.server_port
     protocol    = "tcp"
@@ -52,6 +57,7 @@ resource "aws_security_group" "instance" {
   }
 
   egress {
+    description = "test sg"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
